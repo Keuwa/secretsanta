@@ -14,28 +14,41 @@
     <script defer src="/__/firebase/7.6.1/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
+    <div id="content">
+      <div>
+          <h2>Bonjour Aurélie</h2>
+          <p> Bien, tu as compris la première énigme, mais tu te doutes que le cadenas sur le carton n'est pas là que pour faire jolie </p>
+          <div class="form" >
+            <input onchange="yolo()" id="input1" type="text"> </input>
+            <input onchange="yolo()" id="input2" type="text"> </input>
+            <input onchange="yolo()" id="input3" type="text"> </input>
+          </div>
+          <div id="video" class="video hidden">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/23MCg3yNe8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </div>
+      </div>
     </div>
     <script>
       // todo thiungs here
+      function yolo(){
+        let password
+        let input1 = document.getElementById("input1").value.toLowerCase()
+        let input2 = document.getElementById("input2").value.toLowerCase()
+        let input3 = document.getElementById("input3").value.toLowerCase()
+        let videoDiv = document.getElementById("video")
+        
+        let res = input1 + input2 + input3
+
+        if (res == "eomergollumrohirrim"){
+          alert("yolo:" + res)
+          videoDiv.className = "video"
+        }
+
+      }
     </script>
   </body>
 </html>
