@@ -1,0 +1,29 @@
+html, body {
+    width: 100%;
+    min-height: 100%;
+
+    padding:0px;
+    margin: 0px
+}
+
+body {
+    background-image:url(../image/map.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color: #ECE9E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    width: 75%;
+    padding: 50px; 
+    background-color:rgba(20, 20, 25, 0.8); 
+    font-size: 20px
+}
+
+p {
+    font-size: 20px;
+    line-height: 50px;
+}

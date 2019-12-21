@@ -22,14 +22,18 @@
           <h2>Bonjour Aurélie</h2>
           <p> Bien, tu as compris la première énigme, mais tu te doutes que le cadenas sur le carton n'est pas là que pour faire jolie </p>
           <div class="form" >
-            <input onchange="yolo()" id="input1" type="text"> </input>
-            <input onchange="yolo()" id="input2" type="text"> </input>
-            <input onchange="yolo()" id="input3" type="text"> </input>
+            <input onchange="yolo()" placeholder="Alors ?" id="input1" type="text"> </input>
+            <input onchange="yolo()" placeholder="Une idée ?" id="input2" type="text"> </input>
+            <input onchange="yolo()"  placeholder="Non ?"id="input3" type="text"> </input>
           </div>
-          <div id="video" class="video hidden">
+          <div id="video" class="hidden">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/23MCg3yNe8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
               </iframe>
           </div>
+          <div id="next" class="hidden"> 
+            Bien pour la suite, il te faudra trouver l'anneau.
+          </div>
+          <div id="anneau" class="hidden"> <a href="/map"> L'anneau </a> </div>
       </div>
     </div>
     <script>
@@ -40,12 +44,16 @@
         let input2 = document.getElementById("input2").value.toLowerCase()
         let input3 = document.getElementById("input3").value.toLowerCase()
         let videoDiv = document.getElementById("video")
-        
+        let next = document.getElementById("next")
+        let anneau = document.getElementById("anneau")
+
         let res = input1 + input2 + input3
 
         if (res == "eomergollumrohirrim"){
-          alert("yolo:" + res)
           videoDiv.className = "video"
+          next.className = "next"
+          anneau.className = "next"
+
         }
 
       }
