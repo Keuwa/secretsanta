@@ -19,7 +19,7 @@
   <body>
     <div id="content">
       <div>
-          <h2>Bonjour Aurélie</h2>
+          <h2>Bonjour Aurélie </h2>
           <p> Bien, tu as compris la première énigme, mais tu te doutes que le cadenas sur le carton n'est pas là que pour faire jolie </p>
           <div class="form" >
             <input onchange="yolo()" placeholder="Alors ?" id="input1" type="text"> </input>
@@ -31,7 +31,7 @@
             </iframe>
           </div>
           <div id="next" class="hidden"> 
-            Bien pour la suite, il te faudra trouver l'anneau.
+            Trouve l'anneau pour continuer.
           </div>
           <div id="anneau" class="hidden"> <a href="map.html"> L'anneau </a> </div>
       </div>
@@ -54,11 +54,8 @@
           setTimeout(()=> {
             next.className = "next"
             anneau.className = "next"
-          }, 10000)
-          
-
+          }, 20000)
         }
-
       }
     </script>
   </body>
