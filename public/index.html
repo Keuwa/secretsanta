@@ -27,13 +27,13 @@
             <input onchange="yolo()"  placeholder="Non ?"id="input3" type="text"> </input>
           </div>
           <div id="video" class="hidden">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/23MCg3yNe8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-              </iframe>
+            <iframe onclick="alert()" width="560" height="315" src="https://www.youtube.com/embed/cDrKVCL1CiU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
           </div>
           <div id="next" class="hidden"> 
             Bien pour la suite, il te faudra trouver l'anneau.
           </div>
-          <div id="anneau" class="hidden"> <a href="/map"> L'anneau </a> </div>
+          <div id="anneau" class="hidden"> <a href="map.html"> L'anneau </a> </div>
       </div>
     </div>
     <script>
@@ -51,8 +51,11 @@
 
         if (res == "eomergollumrohirrim"){
           videoDiv.className = "video"
-          next.className = "next"
-          anneau.className = "next"
+          setTimeout(()=> {
+            next.className = "next"
+            anneau.className = "next"
+          }, 10000)
+          
 
         }
 
